@@ -4,11 +4,3 @@
 2. [Cohort Source/Sink Ratio]()
 3. []()
 4. []()
-
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-
