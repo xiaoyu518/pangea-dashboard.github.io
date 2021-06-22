@@ -21,5 +21,5 @@
 
 #### Source/Sink Ratio Estimations
 
-1. [Cohort Source/Sink Ratio](https://xiaoyu518.github.io/ssRatio_interactive.html)
-2. [Source/Sink Ratio by Location](https://xiaoyu518.github.io/cohortOrigin_legend.html)
+1. [Cohort Source/Sink Ratio](https://xiaoyu518.github.io/ssRatio.html)
+2. [Source/Sink Ratio by Location](https://xiaoyu518.github.io/cohortOrigin.html)
