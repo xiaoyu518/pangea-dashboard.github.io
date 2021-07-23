@@ -21,103 +21,148 @@
     	var vlSpec = {
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
             "width": 750, "height": 450,
-            "title": "AHRI Skygrid Plot",
+            "title": "AHRI South Africa Gag and Pol Skygrids",
             "data": {
-                    "values": [
-                        {"Date": "1981", "mean": 8.2858, "median": 8.3762, "upper": 18.9593, "lower": 3.5377},
-                        {"Date": "1982", "mean": 10.468, "median": 10.5953, "upper": 22.7872, "lower": 4.6631},
-                        {"Date": "1983", "mean": 19.4475, "median": 19.573, "upper": 38.3785, "lower": 10.198},
-                        {"Date": "1984", "mean": 47.6195, "median": 47.4746, "upper": 90.8204, "lower": 25.702},
-                        {"Date": "1985", "mean": 97.9056, "median": 96.8283, "upper": 153.5711, "lower": 59.5739},
-                        {"Date": "1986", "mean": 164.7587, "median": 162.1493, "upper": 268.5467, "lower": 110.437},
-                        {"Date": "1987", "mean": 260.3559, "median": 257.6598, "upper": 415.4422, "lower": 176.331},
-                        {"Date": "1988", "mean": 335.4796, "median": 335.6071, "upper": 472.1219, "lower": 223.2135},
-                        {"Date": "1989", "mean": 450.1541, "median": 444.1491, "upper": 647.8579, "lower": 331.3023},
-                        {"Date": "1990", "mean": 605.0759, "median": 602.2837, "upper": 826.8598, "lower": 420.1673},
-                        {"Date": "1991", "mean": 947.3254, "median": 939.4214, "upper": 1365.91, "lower": 692.8865},
-                        {"Date": "1992", "mean": 1506.5543, "median": 1507.6328, "upper": 2225.828, "lower": 1052.1158},
-                        {"Date": "1993", "mean": 2311.7441, "median": 2288.7281, "upper": 3458.0719, "lower": 1566.2785},
-                        {"Date": "1994", "mean": 2923.404, "median": 2890.6581, "upper": 4337.9684, "lower": 1997.2694},
-                        {"Date": "1995", "mean": 4252.9323, "median": 4209.2311, "upper": 6439.2354, "lower": 2738.6312},
-                        {"Date": "1996", "mean": 5859.3776, "median": 5813.3765, "upper": 9338.2877, "lower": 3665.8599},
-                        {"Date": "1997", "mean": 7339.8323, "median": 7274.8738, "upper": 12103.3202, "lower": 4765.0996},
-                        {"Date": "1998", "mean": 11215.1486, "median": 11031.6729, "upper": 19084.4987, "lower": 6901.9546},
-                        {"Date": "1999", "mean": 18368.7726, "median": 17914.116, "upper": 33705.4391, "lower": 10919.3484},
-                        {"Date": "2000", "mean": 26168.3665, "median": 25787.7302, "upper": 47395.0957, "lower": 14184.4461},
-                        {"Date": "2001", "mean": 33568.572, "median": 32729.3829, "upper": 62138.0895, "lower": 17934.9277},
-                        {"Date": "2002", "mean": 45137.7252, "median": 44531.513, "upper": 88760.2111, "lower": 24423.9718},
-                        {"Date": "2003", "mean": 66057.8669, "median": 64783.9864, "upper": 148393.3503, "lower": 33451.521},
-                        {"Date": "2004", "mean": 87244.495, "median": 86369.5914, "upper": 174129.9016, "lower": 38515.7153},
-                        {"Date": "2005", "mean": 95383.5214, "median": 93752.756, "upper": 208216.5147, "lower": 45797.5854},
-                        {"Date": "2006", "mean": 93505.6111, "median": 92515.2883, "upper": 185372.669, "lower": 43887.4237},
-                        {"Date": "2007", "mean": 92109.6224, "median": 90960.6442, "upper": 198261.8087, "lower": 47242.7736},
-                        {"Date": "2008", "mean": 91289.7063, "median": 91219.0169, "upper": 191725.4579, "lower": 45833.1935},
-                        {"Date": "2009", "mean": 85292.3655, "median": 86079.4677, "upper": 173230.0842, "lower": 42324.7463},
-                        {"Date": "2010", "mean": 83049.1207, "median": 81461.6224, "upper": 181674.6345, "lower": 44652.0177},
-                        {"Date": "2011", "mean": 82494.0082, "median": 80941.6844, "upper": 167151.6754, "lower": 42880.4859},
-                        {"Date": "2012", "mean": 84471.8833, "median": 82912.1626, "upper": 158479.0489, "lower": 42586.9844},
-                        {"Date": "2013", "mean": 78797.6936, "median": 77898.4414, "upper": 144493.7821, "lower": 39592.139},
-                        {"Date": "2014", "mean": 60479.0568, "median": 59514.6631, "upper": 113765.093, "lower": 31948.986},
-                        {"Date": "2015", "mean": 71858.6127, "median": 69968.4168, "upper": 153035.9437, "lower": 36012.1221},
-                        {"Date": "2016", "mean": 75284.9647, "median": 74523.4339, "upper": 184928.9185, "lower": 32279.835},
-                        {"Date": "2017", "mean": 78980.881, "median": 75476.6451, "upper": 235434.0196, "lower": 28641.8638},
-                        {"Date": "2018", "mean": 76812.5742, "median": 73843.1605, "upper": 244671.9172, "lower": 23238.6779},
-                        {"Date": "2019", "mean": 81170.4004, "median": 76299.2851, "upper": 348701.8384, "lower": 25072.784},
-                        {"Date": "2020", "mean": 88773.1231, "median": 82715.7887, "upper": 425806.2658, "lower": 20684.9557}
+                                "values": [
+                        {"Date": "2020", "Mean": 88773.12309, "Median": 82715.7887, "Upper": 425806.2658, "Lower": 20684.95571, "Gene": "Pol"},
+                        {"Date": "2019", "Mean": 81170.4004, "Median": 76299.28513, "Upper": 348701.8384, "Lower": 25072.78402, "Gene": "Pol"},
+                        {"Date": "2018", "Mean": 76812.5742, "Median": 73843.16052, "Upper": 244671.9172, "Lower": 23238.67792, "Gene": "Pol"},
+                        {"Date": "2017", "Mean": 78980.88104, "Median": 75476.64505, "Upper": 235434.0196, "Lower": 28641.8638, "Gene": "Pol"},
+                        {"Date": "2016", "Mean": 75284.96473, "Median": 74523.43391, "Upper": 184928.9185, "Lower": 32279.83502, "Gene": "Pol"},
+                        {"Date": "2015", "Mean": 71858.61272, "Median": 69968.41683, "Upper": 153035.9437, "Lower": 36012.12209, "Gene": "Pol"},
+                        {"Date": "2014", "Mean": 60479.05681, "Median": 59514.66308, "Upper": 113765.093, "Lower": 31948.98597, "Gene": "Pol"},
+                        {"Date": "2013", "Mean": 78797.69359, "Median": 77898.44143, "Upper": 144493.7821, "Lower": 39592.13899, "Gene": "Pol"},
+                        {"Date": "2012", "Mean": 84471.88326, "Median": 82912.16263, "Upper": 158479.0489, "Lower": 42586.98445, "Gene": "Pol"},
+                        {"Date": "2011", "Mean": 82494.00821, "Median": 80941.68443, "Upper": 167151.6754, "Lower": 42880.48592, "Gene": "Pol"},
+                        {"Date": "2010", "Mean": 83049.12073, "Median": 81461.62245, "Upper": 181674.6345, "Lower": 44652.0177, "Gene": "Pol"},
+                        {"Date": "2009", "Mean": 85292.36551, "Median": 86079.46775, "Upper": 173230.0842, "Lower": 42324.74627, "Gene": "Pol"},
+                        {"Date": "2008", "Mean": 91289.70627, "Median": 91219.01687, "Upper": 191725.4579, "Lower": 45833.19353, "Gene": "Pol"},
+                        {"Date": "2007", "Mean": 92109.62244, "Median": 90960.6442, "Upper": 198261.8087, "Lower": 47242.77357, "Gene": "Pol"},
+                        {"Date": "2006", "Mean": 93505.61107, "Median": 92515.28828, "Upper": 185372.669, "Lower": 43887.42365, "Gene": "Pol"},
+                        {"Date": "2005", "Mean": 95383.52136, "Median": 93752.756, "Upper": 208216.5147, "Lower": 45797.58542, "Gene": "Pol"},
+                        {"Date": "2004", "Mean": 87244.49498, "Median": 86369.59141, "Upper": 174129.9016, "Lower": 38515.71528, "Gene": "Pol"},
+                        {"Date": "2003", "Mean": 66057.86691, "Median": 64783.98642, "Upper": 148393.3503, "Lower": 33451.52097, "Gene": "Pol"},
+                        {"Date": "2002", "Mean": 45137.7252, "Median": 44531.51305, "Upper": 88760.21109, "Lower": 24423.97178, "Gene": "Pol"},
+                        {"Date": "2001", "Mean": 33568.57199, "Median": 32729.38287, "Upper": 62138.08949, "Lower": 17934.9277, "Gene": "Pol"},
+                        {"Date": "2000", "Mean": 26168.36655, "Median": 25787.73025, "Upper": 47395.09566, "Lower": 14184.44608, "Gene": "Pol"},
+                        {"Date": "1999", "Mean": 18368.77265, "Median": 17914.11602, "Upper": 33705.43906, "Lower": 10919.34844, "Gene": "Pol"},
+                        {"Date": "1998", "Mean": 11215.14857, "Median": 11031.6729, "Upper": 19084.49868, "Lower": 6901.954557, "Gene": "Pol"},
+                        {"Date": "1997", "Mean": 7339.832258, "Median": 7274.873751, "Upper": 12103.32016, "Lower": 4765.099591, "Gene": "Pol"},
+                        {"Date": "1996", "Mean": 5859.377641, "Median": 5813.376512, "Upper": 9338.287679, "Lower": 3665.859932, "Gene": "Pol"},
+                        {"Date": "1995", "Mean": 4252.932278, "Median": 4209.231137, "Upper": 6439.235354, "Lower": 2738.631208, "Gene": "Pol"},
+                        {"Date": "1994", "Mean": 2923.403952, "Median": 2890.658149, "Upper": 4337.968434, "Lower": 1997.269371, "Gene": "Pol"},
+                        {"Date": "1993", "Mean": 2311.744128, "Median": 2288.728099, "Upper": 3458.071934, "Lower": 1566.278505, "Gene": "Pol"},
+                        {"Date": "1992", "Mean": 1506.554349, "Median": 1507.632766, "Upper": 2225.827962, "Lower": 1052.115779, "Gene": "Pol"},
+                        {"Date": "1991", "Mean": 947.3253845, "Median": 939.4214223, "Upper": 1365.910049, "Lower": 692.8864716, "Gene": "Pol"},
+                        {"Date": "1990", "Mean": 605.0758932, "Median": 602.2836669, "Upper": 826.859795, "Lower": 420.1673156, "Gene": "Pol"},
+                        {"Date": "1989", "Mean": 450.1541259, "Median": 444.1490925, "Upper": 647.8578696, "Lower": 331.3023057, "Gene": "Pol"},
+                        {"Date": "1988", "Mean": 335.4796314, "Median": 335.607066, "Upper": 472.1219226, "Lower": 223.2134502, "Gene": "Pol"},
+                        {"Date": "1987", "Mean": 260.3559163, "Median": 257.6598004, "Upper": 415.4422116, "Lower": 176.3310488, "Gene": "Pol"},
+                        {"Date": "1986", "Mean": 164.7587458, "Median": 162.1492617, "Upper": 268.5466654, "Lower": 110.4369623, "Gene": "Pol"},
+                        {"Date": "1985", "Mean": 97.90559863, "Median": 96.82827096, "Upper": 153.5711073, "Lower": 59.57387437, "Gene": "Pol"},
+                        {"Date": "1984", "Mean": 47.61953692, "Median": 47.47456738, "Upper": 90.82042094, "Lower": 25.70196785, "Gene": "Pol"},
+                        {"Date": "1983", "Mean": 19.44748146, "Median": 19.57300062, "Upper": 38.37854133, "Lower": 10.198041, "Gene": "Pol"},
+                        {"Date": "1982", "Mean": 10.46797778, "Median": 10.59534106, "Upper": 22.78720238, "Lower": 4.663081427, "Gene": "Pol"},
+                        {"Date": "1981", "Mean": 8.285838416, "Median": 8.376210002, "Upper": 18.95927738, "Lower": 3.537692951, "Gene": "Pol"},
+                        {"Date": "2020", "Mean": 79346.90529, "Median": 71937.78255, "Upper": 396252.6134, "Lower": 16117.47371, "Gene": "Gag"},
+                        {"Date": "2019", "Mean": 69348.95209, "Median": 65093.66816, "Upper": 267764.6287, "Lower": 19807.98557, "Gene": "Gag"},
+                        {"Date": "2018", "Mean": 59281.83147, "Median": 57826.3577, "Upper": 206238.9393, "Lower": 17584.42038, "Gene": "Gag"},
+                        {"Date": "2017", "Mean": 62313.55146, "Median": 61366.68456, "Upper": 186112.7006, "Lower": 23990.49511, "Gene": "Gag"},
+                        {"Date": "2016", "Mean": 61387.84597, "Median": 59683.83511, "Upper": 143098.2293, "Lower": 24361.51224, "Gene": "Gag"},
+                        {"Date": "2015", "Mean": 51180.23182, "Median": 51173.00351, "Upper": 109962.6137, "Lower": 24073.43439, "Gene": "Gag"},
+                        {"Date": "2014", "Mean": 49962.95686, "Median": 49170.6591, "Upper": 106743.219, "Lower": 27978.22902, "Gene": "Gag"},
+                        {"Date": "2013", "Mean": 80073.34727, "Median": 78131.4958, "Upper": 173549.6551, "Lower": 42949.5555, "Gene": "Gag"},
+                        {"Date": "2012", "Mean": 70755.5611, "Median": 70091.42031, "Upper": 139696.7014, "Lower": 39018.55872, "Gene": "Gag"},
+                        {"Date": "2011", "Mean": 80370.21655, "Median": 78684.26563, "Upper": 169700.4634, "Lower": 38724.9306, "Gene": "Gag"},
+                        {"Date": "2010", "Mean": 71511.49655, "Median": 70072.21792, "Upper": 140669.9285, "Lower": 34665.67673, "Gene": "Gag"},
+                        {"Date": "2009", "Mean": 52978.58113, "Median": 51879.14204, "Upper": 106440.5563, "Lower": 26718.23507, "Gene": "Gag"},
+                        {"Date": "2008", "Mean": 43289.86716, "Median": 42004.41656, "Upper": 91048.7196, "Lower": 22931.17769, "Gene": "Gag"},
+                        {"Date": "2007", "Mean": 41867.26422, "Median": 40673.68834, "Upper": 94883.11632, "Lower": 21359.55227, "Gene": "Gag"},
+                        {"Date": "2006", "Mean": 40405.29467, "Median": 39627.89229, "Upper": 80863.58732, "Lower": 20740.05542, "Gene": "Gag"},
+                        {"Date": "2005", "Mean": 33233.1812, "Median": 32533.02979, "Upper": 68214.24307, "Lower": 16985.6358, "Gene": "Gag"},
+                        {"Date": "2004", "Mean": 22282.00118, "Median": 22042.99889, "Upper": 44444.21299, "Lower": 12032.39003, "Gene": "Gag"},
+                        {"Date": "2003", "Mean": 13290.91285, "Median": 12781.81833, "Upper": 22907.8641, "Lower": 7400.819687, "Gene": "Gag"},
+                        {"Date": "2002", "Mean": 7100.597057, "Median": 6967.5767, "Upper": 11973.55097, "Lower": 4086.851464, "Gene": "Gag"},
+                        {"Date": "2001", "Mean": 4554.834082, "Median": 4494.855692, "Upper": 7136.521751, "Lower": 2737.336476, "Gene": "Gag"},
+                        {"Date": "2000", "Mean": 3428.160268, "Median": 3353.087339, "Upper": 5384.655577, "Lower": 2128.169709, "Gene": "Gag"},
+                        {"Date": "1999", "Mean": 2513.068454, "Median": 2477.883156, "Upper": 3790.002014, "Lower": 1743.706498, "Gene": "Gag"},
+                        {"Date": "1998", "Mean": 1897.207386, "Median": 1865.738422, "Upper": 2861.857546, "Lower": 1356.314975, "Gene": "Gag"},
+                        {"Date": "1997", "Mean": 1393.260423, "Median": 1376.249464, "Upper": 2023.61016, "Lower": 903.3512261, "Gene": "Gag"},
+                        {"Date": "1996", "Mean": 911.7965233, "Median": 901.4148556, "Upper": 1309.636151, "Lower": 665.7288313, "Gene": "Gag"},
+                        {"Date": "1995", "Mean": 654.4594067, "Median": 648.2187201, "Upper": 948.2189278, "Lower": 458.2051914, "Gene": "Gag"},
+                        {"Date": "1994", "Mean": 490.4538793, "Median": 488.7978479, "Upper": 744.0671844, "Lower": 343.7930085, "Gene": "Gag"},
+                        {"Date": "1993", "Mean": 293.6358573, "Median": 288.4756423, "Upper": 464.9193846, "Lower": 204.3599429, "Gene": "Gag"},
+                        {"Date": "1992", "Mean": 182.8642771, "Median": 182.3535139, "Upper": 279.9022644, "Lower": 121.2427077, "Gene": "Gag"},
+                        {"Date": "1991", "Mean": 95.08260624, "Median": 92.88864791, "Upper": 158.6833996, "Lower": 57.40600373, "Gene": "Gag"},
+                        {"Date": "1990", "Mean": 44.38163027, "Median": 43.89846974, "Upper": 75.72718514, "Lower": 24.9991291, "Gene": "Gag"},
+                        {"Date": "1989", "Mean": 14.64437871, "Median": 14.36049208, "Upper": 32.42732848, "Lower": 7.395795626, "Gene": "Gag"},
+                        {"Date": "1988", "Mean": 6.589213053, "Median": 6.576248216, "Upper": 16.02966797, "Lower": 3.010335552, "Gene": "Gag"},
+                        {"Date": "1987", "Mean": 4.826523358, "Median": 4.673290595, "Upper": 13.82613448, "Lower": 1.903949931, "Gene": "Gag"},
+                        {"Date": "1986", "Mean": 4.01085589, "Median": 3.94649924, "Upper": 14.99475176, "Lower": 1.278360331, "Gene": "Gag"},
+                        {"Date": "1985", "Mean": 3.311816907, "Median": 3.334247323, "Upper": 12.40211024, "Lower": 0.741564054, "Gene": "Gag"},
+                        {"Date": "1984", "Mean": 2.82159313, "Median": 2.913723536, "Upper": 13.56812437, "Lower": 0.517575235, "Gene": "Gag"},
+                        {"Date": "1983", "Mean": 2.618232375, "Median": 2.731357796, "Upper": 16.96844916, "Lower": 0.351644138, "Gene": "Gag"},
+                        {"Date": "1982", "Mean": 2.401163971, "Median": 2.482789871, "Upper": 23.90381025, "Lower": 0.28290792, "Gene": "Gag"},
+                        {"Date": "1981", "Mean": 2.249554254, "Median": 2.348956753, "Upper": 29.30708838, "Lower": 0.223421312, "Gene": "Gag"}
                     ]
-                },
+            },
+            "encoding": {"x": {"field": "Date", "type": "temporal"}},
             "layer": [
-                {
-                "mark": {
-                    "type": "errorband", 
-                    "clip": true,
-                    "opacity": 0.3},
-                "encoding": {
+            {"mark": {"type": "area","opacity": 0.15},
+            "encoding": {
                     "y": {
-                    "field": "upper",
-                    "type": "quantitative",
-                    "title": "Skygrid Plot",
-                    "axis": {"titleColor": "#85A9C5"},
-                    "scale": { "type": "log", "domain": [0.1, 1000000]}
-                    },
-                    "y2": {
-                    "field": "lower"
-                    },
-                    "x": {
-                    "field": "Date",
-                        "type": "temporal",
-                    "axis": {"title": "Year"},
-                    "scale": {"domain": ["1981","2020"]}
-                    }
-                }
-                },
-                {
-                "mark": {
-                    "stroke": "#85A9C5",
-                    "clip": true, 
-                    "type": "line"
-                    },
-                "encoding": {
-                    "y": {
-                    "field": "mean",
+                    "field": "Upper",
                     "type": "quantitative",
                     "axis": {
-                        "titleColor": "#85A9C5",
+                        "title":"Skygrid Plot Log Scale",
+                        "ticks":false},
+                        "scale": { "type": "log", "domain": [1, 1000000]}},
+                    "y2": {"field": "Lower"},
+                    "x": {"field": "Date","type": "temporal"},
+                    "color": {"field":"Gene","scale": {"type": "ordinal"}}
+                    }
+                },
+            {
+                "encoding": {
+                "color": {"field": "Gene", "type": "nominal"},
+                    "y": {
+                    "field": "Mean", 
+                    "type": "quantitative",
+                    "axis": {
                         "labels":false,
                         "title":"",
                         "ticks":false},
-                    "scale": { "type": "log", "domain": [0.1, 1000000]}
-                    },
-                    "x": {
-                    "field": "Date",
-                        "type": "temporal",
-                    "axis": {"title": "Year"}
-                    }
-                }
+                    "scale": { "type": "log", "domain": [1, 1000000]}}},
+                    "layer": [
+                    {"mark": "line"},
+                    {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
+                    ]
                 },
                 {
-                    "data": {
-                    "values": [
+                "transform": [{"pivot": "Gene", "value": "Mean", "groupby": ["Date"]}],
+                "mark": "rule",
+                "encoding": {
+                "opacity": {
+                "condition": {"value": 0.3, "param": "hover", "empty": false},"value": 0},
+                "tooltip": [
+                {"field": "Pol", "type": "quantitative"},
+                {"field": "Gag", "type": "quantitative"}
+                ]
+            },
+            "params": [{
+                "name": "hover",
+                "select": {
+                "type": "point",
+                "fields": ["Date"],
+                "nearest": true,
+                "on": "mouseover",
+                "clear": "mouseout"
+                }
+                }]
+            },
+            {
+            "data": {
+                "values": [
                         {"Date": "2011-01-17", "sampleSize": 1},
                         {"Date": "2011-01-20", "sampleSize": 2},
                         {"Date": "2011-02-15", "sampleSize": 1},
@@ -677,7 +722,7 @@
                         {"Date": "2019-05-29", "sampleSize": 3},
                         {"Date": "2019-05-30", "sampleSize": 1}
                     ]
-                },
+            },
                 "mark": {"stroke": "#eba1b0d5", "type": "tick","opacity":0.3},
                 "encoding": {
                     "y": {
@@ -695,7 +740,7 @@
                 }
                 }
             ]
-		};
+	};
 
      // Embed the visualization in the container with id `vis`
 	vegaEmbed('#vis', vlSpec);
