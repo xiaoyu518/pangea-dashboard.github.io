@@ -24,6 +24,7 @@
 
 1. [Cohort Source/Sink Ratio](https://xiaoyu518.github.io/ssRatio.html)
 2. [Cohort Source/Sink Ratio from 1989](https://xiaoyu518.github.io/ssRatio_1989.html)
-3. [Number of Transition Events for Each Cohort from 1989](https://xiaoyu518.github.io/ssEvents_1989.html)
-4. [Number of Transition Events for Each Cohort from 1999](https://xiaoyu518.github.io/ssEvents_1999.html)
+3. [Cohort Source/Sink Ratio from 1999](https://xiaoyu518.github.io/ssRatio_1999.html)
+4. [Number of Transition Events for Each Cohort from 1989](https://xiaoyu518.github.io/ssEvents_1989.html)
+5. [Number of Transition Events for Each Cohort from 1999](https://xiaoyu518.github.io/ssEvents_1999.html)
 6. [Source/Sink Ratio by Location](https://xiaoyu518.github.io/cohortOrigin.html)
