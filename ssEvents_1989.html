@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Legend Interaction Test</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style media="screen">
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+	<div id="vis"></div>
+    <script>
+    	// Assign the specification to a local variable vlSpec.
+    	var vlSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "data": {
+                "values": [
+			        {"cohort": "LANL", "transition": "Imports", "events": 62},
+			        {"cohort": "LANL", "transition": "Exports", "events": 4},
+			        {"cohort": "UgandaRakai", "transition": "Imports", "events": 250},
+			        {"cohort": "UgandaRakai", "transition": "Exports", "events": 0},
+			        {"cohort": "PartnerUganda", "transition": "Imports", "events": 71},
+			        {"cohort": "PartnerUganda", "transition": "Exports", "events": 267},
+                    {"cohort": "MRCUganda", "transition": "Imports", "events": 59},
+                    {"cohort": "MRCUganda", "transition": "Exports", "events": 40},
+                    {"cohort": "PartnerTanzania", "transition": "Imports", "events": 2},
+                    {"cohort": "PartnerTanzania", "transition": "Exports", "events": 70},
+                    {"cohort": "PartnerKenya", "transition": "Imports", "events": 26},
+                    {"cohort": "PartnerKenya", "transition": "Exports", "events": 86},
+                    {"cohort": "PopartCentral", "transition": "Imports", "events": 14},
+                    {"cohort": "PopartCentral", "transition": "Exports", "events": 0},
+                    {"cohort": "PopartCopperbelt", "transition": "Imports", "events": 10},
+                    {"cohort": "PopartCopperbelt", "transition": "Exports", "events": 5},
+                    {"cohort": "PopartSouthern", "transition": "Imports", "events": 4},
+                    {"cohort": "PopartSouthern", "transition": "Exports", "events": 7},
+                    {"cohort": "PartnerBotswana", "transition": "Imports", "events": 0},
+                    {"cohort": "PartnerBotswana", "transition": "Exports", "events": 24},
+                    {"cohort": "Botswana", "transition": "Imports", "events": 4},
+                    {"cohort": "Botswana", "transition": "Exports", "events": 0},
+                    {"cohort": "AHRISouthAfrica", "transition": "Imports", "events": 1},
+                    {"cohort": "AHRISouthAfrica", "transition": "Exports", "events": 0}
+                ]
+            },
+            "width": {"step": 40},
+            "mark": "bar",
+            "encoding": {
+                "column": {
+                "field": "cohort", 
+                "type": "ordinal", 
+                "spacing": 10, 
+                "title":"Cohorts"
+                },
+                "y": {
+                "aggregate": "sum", "field": "events",
+                "title": "Number of Transitions Events",
+                "axis": {"grid": true}
+                },
+                "x": {
+                "field": "transition",
+                "axis": {"title": ""}
+                },
+                "color": {
+                "field": "transition",
+                "scale": {"range": ["lightblue", "darkblue"]}
+                }
+            },
+            "config": {
+                "view": {"stroke": "transparent"},
+                "axis": {"domainWidth": 1}
+            }
+		};
+
+     // Embed the visualization in the container with id `vis`
+	vegaEmbed('#vis', vlSpec);
+
+    </script>
+  </body>
+</html>
