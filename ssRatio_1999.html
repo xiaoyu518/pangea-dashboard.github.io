@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Legend Interaction Test</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style media="screen">
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+	<div id="vis"></div>
+    <script>
+    	// Assign the specification to a local variable vlSpec.
+    	var vlSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "data": {
+                "values": [
+                    {"cohort": "LANL", "transition": "Imports", "events": 2},
+                    {"cohort": "LANL", "transition": "Exports", "events": 0},
+                    {"cohort": "Uganda_Rakai", "transition": "Imports", "events": 58},
+                    {"cohort": "Uganda_Rakai", "transition": "Exports", "events": 0},
+                    {"cohort": "Partners_Uganda", "transition": "Imports", "events": 0},
+                    {"cohort": "Partners_Uganda", "transition": "Exports", "events": 20},
+                    {"cohort": "MRC_Uganda", "transition": "Imports", "events": 5},
+                    {"cohort": "MRC_Uganda", "transition": "Exports", "events": 40},
+                    {"cohort": "Popart-Zambia-Copperbelt", "transition": "Imports", "events": 5},
+                    {"cohort": "Popart-Zambia-Copperbelt", "transition": "Exports", "events": 5},
+                    {"cohort": "Popart-Zambia-Southern", "transition": "Imports", "events": 0},
+                    {"cohort": "Popart-Zambia-Southern", "transition": "Exports", "events": 5}
+                    ]
+                },
+            "width": {"step": 60},
+            "mark": "bar",
+            "encoding": {
+                "column": {
+                "field": "cohort", 
+                "type": "ordinal", 
+                "spacing": 10, 
+                "title":"Cohorts"
+                },
+                "y": {
+                "aggregate": "sum", "field": "events",
+                "title": "Number of Transitions Events",
+                "axis": {"grid": true}
+                },
+                "x": {
+                "field": "transition",
+                "axis": {"title": ""}
+                },
+                "color": {
+                "field": "transition",
+                "scale": {"range": ["lightblue", "darkblue"]}
+                }
+            },
+            "config": {
+                "view": {"stroke": "transparent"},
+                "axis": {"domainWidth": 1}
+            }
+		};
+
+     // Embed the visualization in the container with id `vis`
+	vegaEmbed('#vis', vlSpec);
+
+    </script>
+  </body>
+</html>
