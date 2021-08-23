@@ -1,6 +1,6 @@
 ## PANGEA-Dashboard Images/HTML Pages
 
-#### Cohort Sample Time and Skygrid Population Estimates
+#### Cohort Sampling Time, Incidence Rate and Skygrid Estimates
 
 1. [AHRI Skygrid](https://xiaoyu518.github.io/AHRI_Skygrid.html)
 2. [Botswana Skygrid](https://xiaoyu518.github.io/Botswana_Skygrid.html)
@@ -13,9 +13,9 @@
 9. [Uganda Rakai Skygrid](https://xiaoyu518.github.io/UgandaRakai_Skygrid.html)
 
 
-#### Cohort Group Skygrid
+#### Cohort Grouped Skygrid by Country
 
-1. [Popart Cohort Skygrid](https://xiaoyu518.github.io/Popart_Skygrid.html)
+1. [Popart Zambia Cohort Skygrid](https://xiaoyu518.github.io/Popart_Skygrid.html)
 2. [Uganda Cohort Skygrid](https://xiaoyu518.github.io/Uganda_Skygrid.html)
 3. [Botswana Cohort Skygrid](https://xiaoyu518.github.io/BotswanaAll_Skygrid.html)
 
