@@ -15,7 +15,7 @@
 
 #### Cohort Grouped Skygrid by Country
 
-1. [Popart Zambia Cohort Skygrid](https://xiaoyu518.github.io/Popart_Skygrid.html)
+1. [Popart Zambia Cohort Skygrid](https://xiaoyu518.github.io/PopartAll_Skygrid.html)
 2. [Uganda Cohort Skygrid](https://xiaoyu518.github.io/Uganda_Skygrid.html)
 3. [Botswana Cohort Skygrid](https://xiaoyu518.github.io/BotswanaAll_Skygrid.html)
 
