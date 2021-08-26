@@ -28,5 +28,9 @@
 
 1. [Cohort Source/Sink Ratio from 1989](https://xiaoyu518.github.io/ssRatio_1989.html)
 2. [Cohort Source/Sink Ratio from 1999](https://xiaoyu518.github.io/ssRatio_1999.html)
-3. [Number of Transition Events for Each Cohort from 1989](https://xiaoyu518.github.io/ssEvents_1989.html)
-4. [Number of Transition Events for Each Cohort from 1999](https://xiaoyu518.github.io/ssEvents_1999.html)
+
+#### Number of Import and Export Estimations
+
+1. [Number of Transition Events for Each Cohort from 1989](https://xiaoyu518.github.io/ssEvents_1989.html)
+2. [Number of Transition Events for Each Cohort from 1999](https://xiaoyu518.github.io/ssEvents_1999.html)
+3. [Number of Transition Events Between Outside and Within Uganda Cohorts](https://xiaoyu518.github.io/Uganda_Cohort_Transition.html)
