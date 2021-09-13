@@ -1,16 +1,17 @@
 ## PANGEA-Dashboard Images/HTML Pages
 
-#### Cohort Sampling Time, Incidence Rate and Skygrid Estimates
+#### PANGEA/Cohort Sampling Time, Incidence Rate and Skygrid Estimations
 
-1. [AHRI Skygrid](https://xiaoyu518.github.io/AHRI_Skygrid.html)
-2. [Botswana Skygrid](https://xiaoyu518.github.io/Botswana_Skygrid.html)
-3. [MRC Uganda Skygrid](https://xiaoyu518.github.io/MRCUganda_Skygrid.html)
-4. [Partner Kenya Skygrid](https://xiaoyu518.github.io/PartnerKenya_Skygrid.html)
-5. [Partner Uganda Skygrid](https://xiaoyu518.github.io/PartnerUganda_Skygrid.html)
-6. [Popart Central Skygrid](https://xiaoyu518.github.io/PopartCentral_Skygrid.html)
-7. [Popart Copperbelt Skygrid](https://xiaoyu518.github.io/PopartCopperbelt_Skygrid.html)
-8. [Popart Southern Skygrid](https://xiaoyu518.github.io/PopartSouthern_Skygrid.html)
-9. [Uganda Rakai Skygrid](https://xiaoyu518.github.io/UgandaRakai_Skygrid.html)
+1. [PANGEA Skygrid](https://xiaoyu518.github.io/PANGEA_Skygrid.html)
+2. [AHRI Skygrid](https://xiaoyu518.github.io/AHRI_Skygrid.html)
+3. [Botswana Skygrid](https://xiaoyu518.github.io/Botswana_Skygrid.html)
+4. [MRC Uganda Skygrid](https://xiaoyu518.github.io/MRCUganda_Skygrid.html)
+5. [Partner Kenya Skygrid](https://xiaoyu518.github.io/PartnerKenya_Skygrid.html)
+6. [Partner Uganda Skygrid](https://xiaoyu518.github.io/PartnerUganda_Skygrid.html)
+7. [Popart Central Skygrid](https://xiaoyu518.github.io/PopartCentral_Skygrid.html)
+8. [Popart Copperbelt Skygrid](https://xiaoyu518.github.io/PopartCopperbelt_Skygrid.html)
+9. [Popart Southern Skygrid](https://xiaoyu518.github.io/PopartSouthern_Skygrid.html)
+10. [Uganda Rakai Skygrid](https://xiaoyu518.github.io/UgandaRakai_Skygrid.html)
 
 
 #### Cohort Grouped with Sampling Time, Incidence Rate and Skygrid by Country 
