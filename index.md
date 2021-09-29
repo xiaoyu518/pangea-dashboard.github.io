@@ -35,3 +35,13 @@
 1. [Number of Transition Events for Each Cohort from 1989](https://xiaoyu518.github.io/ssEvents_1989.html)
 2. [Number of Transition Events for Each Cohort from 1999](https://xiaoyu518.github.io/ssEvents_1999.html)
 3. [Number of Transition Events Between Outside and Within Uganda Cohorts](https://xiaoyu518.github.io/Uganda_Cohort_Transition.html)
+
+
+Acknowledgements:
+
+Country incidence rate curve for skygrid plots are taken from UNAIDS data [source](https://aidsinfo.unaids.org/)
+Rakai cohort incidence rate data is provided by the [Rakai Community Cohort Study](https://www.rhsp.org/research/rccs/explore-rccs-data)
+Project Affiliate: [PANGEA](https://www.pangea-hiv.org/)
+Project Funders: Melinda Gates Foundation
+Author Affilate: University of Edinburgh, [Andrew Rambaut Group](http://tree.bio.ed.ac.uk/people/)
+Author Email: xiaoyu.yu@ed.ac.uk
