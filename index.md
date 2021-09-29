@@ -43,6 +43,6 @@
 Country incidence rate data for skygrid plots are taken from [UNAIDS](https://aidsinfo.unaids.org/)<br>
 Rakai cohort incidence rate data is provided by the [Rakai Community Cohort Study](https://www.rhsp.org/research/rccs/explore-rccs-data)<br>
 Project Affiliate: [PANGEA](https://www.pangea-hiv.org/)<br>
-Project Funders: Melinda Gates Foundation<br>
+Project Funders: [Melinda Gates Foundation](https://www.gatesfoundation.org/)<br>
 Author Affilate: University of Edinburgh, [Andrew Rambaut Group](http://tree.bio.ed.ac.uk/people/)<br>
 Author Email: xiaoyu.yu@ed.ac.uk<br>
