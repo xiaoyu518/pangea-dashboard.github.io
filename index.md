@@ -39,9 +39,9 @@
 
 Acknowledgements:
 
-Country incidence rate curve for skygrid plots are taken from UNAIDS data [source](https://aidsinfo.unaids.org/)
-Rakai cohort incidence rate data is provided by the [Rakai Community Cohort Study](https://www.rhsp.org/research/rccs/explore-rccs-data)
-Project Affiliate: [PANGEA](https://www.pangea-hiv.org/)
-Project Funders: Melinda Gates Foundation
-Author Affilate: University of Edinburgh, [Andrew Rambaut Group](http://tree.bio.ed.ac.uk/people/)
-Author Email: xiaoyu.yu@ed.ac.uk
+Country incidence rate curve for skygrid plots are taken from UNAIDS data [source](https://aidsinfo.unaids.org/)<br>
+Rakai cohort incidence rate data is provided by the [Rakai Community Cohort Study](https://www.rhsp.org/research/rccs/explore-rccs-data)<br>
+Project Affiliate: [PANGEA](https://www.pangea-hiv.org/)<br>
+Project Funders: Melinda Gates Foundation<br>
+Author Affilate: University of Edinburgh, [Andrew Rambaut Group](http://tree.bio.ed.ac.uk/people/)<br>
+Author Email: xiaoyu.yu@ed.ac.uk<br>
