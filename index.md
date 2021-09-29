@@ -40,7 +40,7 @@
 
 #### Acknowledgements:
 
-Country incidence rate curve for skygrid plots are taken from UNAIDS data [source](https://aidsinfo.unaids.org/)<br>
+Country incidence rate data for skygrid plots are taken from [UNAIDS](https://aidsinfo.unaids.org/)<br>
 Rakai cohort incidence rate data is provided by the [Rakai Community Cohort Study](https://www.rhsp.org/research/rccs/explore-rccs-data)<br>
 Project Affiliate: [PANGEA](https://www.pangea-hiv.org/)<br>
 Project Funders: Melinda Gates Foundation<br>
