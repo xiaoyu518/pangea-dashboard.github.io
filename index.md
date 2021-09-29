@@ -38,7 +38,7 @@
 
 <br>
 
-####Acknowledgements:
+#### Acknowledgements:
 
 Country incidence rate curve for skygrid plots are taken from UNAIDS data [source](https://aidsinfo.unaids.org/)<br>
 Rakai cohort incidence rate data is provided by the [Rakai Community Cohort Study](https://www.rhsp.org/research/rccs/explore-rccs-data)<br>
