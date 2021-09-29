@@ -36,8 +36,9 @@
 2. [Number of Transition Events for Each Cohort from 1999](https://xiaoyu518.github.io/ssEvents_1999.html)
 3. [Number of Transition Events Between Outside and Within Uganda Cohorts](https://xiaoyu518.github.io/Uganda_Cohort_Transition.html)
 
+<br>
 
-Acknowledgements:
+####Acknowledgements:
 
 Country incidence rate curve for skygrid plots are taken from UNAIDS data [source](https://aidsinfo.unaids.org/)<br>
 Rakai cohort incidence rate data is provided by the [Rakai Community Cohort Study](https://www.rhsp.org/research/rccs/explore-rccs-data)<br>
