@@ -1,6 +1,6 @@
 ## PANGEA-Dashboard Images/HTML Pages
 
-#### PANGEA/Cohort Sampling Time, Incidence Rate and Skygrid Estimations
+#### PANGEA Cohort Sampling Time, Incidence Rate and Skygrid Estimations
 
 1. [PANGEA Skygrid](https://xiaoyu518.github.io/PANGEA_Skygrid.html)
 2. [AHRI Skygrid](https://xiaoyu518.github.io/AHRI_Skygrid.html)
@@ -13,6 +13,9 @@
 9. [Popart Southern Skygrid](https://xiaoyu518.github.io/PopartSouthern_Skygrid.html)
 10. [Uganda Rakai Skygrid](https://xiaoyu518.github.io/UgandaRakai_Skygrid.html)
 
+#### PANGEA Cohort Sampling Time, Incidence Rate and Different Coalescent Model Estimations
+
+1. [Botswana Coalescent](https://xiaoyu518.github.io/Botswana_Coalescent.html)
 
 #### Cohort Grouped with Sampling Time, Incidence Rate and Skygrid by Country 
 
