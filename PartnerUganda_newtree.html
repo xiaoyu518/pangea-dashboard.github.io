@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Legend Interaction Test</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style media="screen">
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+	<div id="vis"></div>
+    <script>
+    	// Assign the specification to a local variable vlSpec.
+    	var vlSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": 750, "height": 450,
+            "title": "Partner Uganda gag, pol and env Skygrids",
+            "data": {
+                "values": [
+			{"Date": "2014", "mean": 25.06096805, "median": 24.84487155, "upper": 114.6449616, "lower": 5.14184633, "gene": "Pol"},
+			{"Date": "2013", "mean": 64.13517803, "median": 62.51392611, "upper": 125.6768995, "lower": 31.74380894, "gene": "Pol"},
+			{"Date": "2012", "mean": 543.5831762, "median": 540.7614452, "upper": 777.8037223, "lower": 382.7748173, "gene": "Pol"},
+			{"Date": "2011", "mean": 2613.368111, "median": 2583.294084, "upper": 3722.710687, "lower": 1909.819257, "gene": "Pol"},
+			{"Date": "2010", "mean": 5223.77542, "median": 5140.741767, "upper": 7611.080099, "lower": 3445.521165, "gene": "Pol"},
+			{"Date": "2009", "mean": 4517.122094, "median": 4480.983793, "upper": 6379.069514, "lower": 3246.856762, "gene": "Pol"},
+			{"Date": "2008", "mean": 7912.822351, "median": 7785.811508, "upper": 12649.05472, "lower": 5398.645425, "gene": "Pol"},
+			{"Date": "2007", "mean": 7982.13986, "median": 7869.018643, "upper": 12256.54568, "lower": 5401.782859, "gene": "Pol"},
+			{"Date": "2006", "mean": 15245.29821, "median": 14960.39628, "upper": 27245.72614, "lower": 8257.483072, "gene": "Pol"},
+			{"Date": "2005", "mean": 26514.99045, "median": 25793.98355, "upper": 57820.07952, "lower": 11938.61907, "gene": "Pol"},
+			{"Date": "2004", "mean": 61761.86556, "median": 59026.10545, "upper": 149914.7335, "lower": 23669.0163, "gene": "Pol"},
+			{"Date": "2003", "mean": 73773.657, "median": 71448.25638, "upper": 220861.0592, "lower": 30183.69176, "gene": "Pol"},
+			{"Date": "2002", "mean": 100603.4005, "median": 93929.80139, "upper": 355893.7155, "lower": 34535.32987, "gene": "Pol"},
+			{"Date": "2001", "mean": 186909.2983, "median": 178043.2068, "upper": 655279.0675, "lower": 52334.70168, "gene": "Pol"},
+			{"Date": "2000", "mean": 232856.838, "median": 224503.9393, "upper": 1025155.382, "lower": 75941.46091, "gene": "Pol"},
+			{"Date": "1999", "mean": 227702.9171, "median": 212980.4506, "upper": 896141.9062, "lower": 67113.49523, "gene": "Pol"},
+			{"Date": "1998", "mean": 216598.6145, "median": 207228.8981, "upper": 823874.9066, "lower": 58819.24871, "gene": "Pol"},
+			{"Date": "1997", "mean": 206424.1318, "median": 190182.9163, "upper": 783726.6957, "lower": 59320.45111, "gene": "Pol"},
+			{"Date": "1996", "mean": 159277.9888, "median": 148228.35, "upper": 570393.9414, "lower": 43354.01934, "gene": "Pol"},
+			{"Date": "1995", "mean": 88260.59464, "median": 84251.2499, "upper": 294414.209, "lower": 29633.16587, "gene": "Pol"},
+			{"Date": "1994", "mean": 38974.7643, "median": 36653.76343, "upper": 113916.3143, "lower": 14863.67668, "gene": "Pol"},
+			{"Date": "1993", "mean": 18510.53298, "median": 17801.51571, "upper": 46846.02478, "lower": 8597.529619, "gene": "Pol"},
+			{"Date": "1992", "mean": 10656.82476, "median": 10285.30278, "upper": 25405.33418, "lower": 5166.151592, "gene": "Pol"},
+			{"Date": "1991", "mean": 7151.485552, "median": 6861.42085, "upper": 15002.39484, "lower": 3597.793807, "gene": "Pol"},
+			{"Date": "1990", "mean": 4155.877126, "median": 4084.563027, "upper": 7722.8609, "lower": 2163.057142, "gene": "Pol"},
+			{"Date": "1989", "mean": 2704.320974, "median": 2659.499763, "upper": 4697.83804, "lower": 1773.662962, "gene": "Pol"},
+			{"Date": "1988", "mean": 2127.227382, "median": 2068.932012, "upper": 3543.280872, "lower": 1345.927546, "gene": "Pol"},
+			{"Date": "1987", "mean": 1217.504833, "median": 1204.183812, "upper": 1871.847029, "lower": 800.0316619, "gene": "Pol"},
+			{"Date": "1986", "mean": 687.0146596, "median": 677.3451315, "upper": 1039.519729, "lower": 459.6188438, "gene": "Pol"},
+			{"Date": "1985", "mean": 492.7438326, "median": 482.5874832, "upper": 742.8676519, "lower": 342.0253282, "gene": "Pol"},
+			{"Date": "1984", "mean": 509.4333645, "median": 498.3532107, "upper": 904.3978273, "lower": 319.2705789, "gene": "Pol"},
+			{"Date": "1983", "mean": 363.0432611, "median": 353.8769483, "upper": 606.4723512, "lower": 211.6866196, "gene": "Pol"},
+			{"Date": "1982", "mean": 417.8961546, "median": 420.8614708, "upper": 890.0934667, "lower": 224.4090263, "gene": "Pol"},
+			{"Date": "1981", "mean": 284.0288303, "median": 269.2063891, "upper": 621.3546208, "lower": 155.7255882, "gene": "Pol"},
+			{"Date": "2014", "mean": 3474.546383, "median": 3479.21797, "upper": 4125.560096, "lower": 2853.818131, "gene": "old_pol"},
+			{"Date": "2013", "mean": 13757.12998, "median": 13240.87009, "upper": 27758.61258, "lower": 8101.428146, "gene": "old_pol"},
+			{"Date": "2012", "mean": 10251.82037, "median": 10066.90308, "upper": 17724.02603, "lower": 6279.931054, "gene": "old_pol"},
+			{"Date": "2011", "mean": 10501.44539, "median": 10219.91114, "upper": 18489.88305, "lower": 6218.352773, "gene": "old_pol"},
+			{"Date": "2010", "mean": 15583.71634, "median": 15534.86872, "upper": 29181.05797, "lower": 8342.702812, "gene": "old_pol"},
+			{"Date": "2009", "mean": 25014.42115, "median": 24149.63799, "upper": 56458.68481, "lower": 12361.81727, "gene": "old_pol"},
+			{"Date": "2008", "mean": 36173.74708, "median": 35525.43481, "upper": 75635.46238, "lower": 14788.7159, "gene": "old_pol"},
+			{"Date": "2007", "mean": 47158.05705, "median": 45321.8697, "upper": 119624.1012, "lower": 18894.68211, "gene": "old_pol"},
+			{"Date": "2006", "mean": 65131.61175, "median": 63626.50225, "upper": 169553.6206, "lower": 25023.52267, "gene": "old_pol"},
+			{"Date": "2005", "mean": 92518.56371, "median": 89011.96757, "upper": 265618.7731, "lower": 32621.53967, "gene": "old_pol"},
+			{"Date": "2004", "mean": 130402.9905, "median": 124116.2099, "upper": 401501.3702, "lower": 43868.44055, "gene": "old_pol"},
+			{"Date": "2003", "mean": 156742.5619, "median": 156534.1247, "upper": 493153.0263, "lower": 48495.0806, "gene": "old_pol"},
+			{"Date": "2002", "mean": 177994.214, "median": 175014.7654, "upper": 589887.8654, "lower": 58350.31823, "gene": "old_pol"},
+			{"Date": "2001", "mean": 201429.1976, "median": 189093.3741, "upper": 792014.883, "lower": 72405.04101, "gene": "old_pol"},
+			{"Date": "2000", "mean": 231366.3671, "median": 221149.327, "upper": 771999.7388, "lower": 61875.44383, "gene": "old_pol"},
+			{"Date": "1999", "mean": 289701.0713, "median": 281977.0789, "upper": 1140170.816, "lower": 88018.00332, "gene": "old_pol"},
+			{"Date": "1998", "mean": 376696.3188, "median": 355285.6613, "upper": 1476194.625, "lower": 100729.166, "gene": "old_pol"},
+			{"Date": "1997", "mean": 432855.9713, "median": 396432.5128, "upper": 1830894.069, "lower": 103638.493, "gene": "old_pol"},
+			{"Date": "1996", "mean": 445726.5912, "median": 416174.8764, "upper": 2089887.736, "lower": 101623.5643, "gene": "old_pol"},
+			{"Date": "1995", "mean": 405872.0572, "median": 383049.0378, "upper": 2094519.008, "lower": 106110.2743, "gene": "old_pol"},
+			{"Date": "1994", "mean": 317769.0816, "median": 289906.8147, "upper": 1534573.699, "lower": 86058.22828, "gene": "old_pol"},
+			{"Date": "1993", "mean": 244144.4778, "median": 231739.4862, "upper": 1035042.381, "lower": 77404.48633, "gene": "old_pol"},
+			{"Date": "1992", "mean": 190740.7335, "median": 185013.2835, "upper": 692449.8443, "lower": 59267.63764, "gene": "old_pol"},
+			{"Date": "1991", "mean": 159727.1002, "median": 154431.946, "upper": 558532.7818, "lower": 53658.37552, "gene": "old_pol"},
+			{"Date": "1990", "mean": 140828.3225, "median": 132891.739, "upper": 414293.0821, "lower": 41378.16345, "gene": "old_pol"},
+			{"Date": "1989", "mean": 119275.8561, "median": 114933.9293, "upper": 375749.5559, "lower": 39635.84254, "gene": "old_pol"},
+			{"Date": "1988", "mean": 93612.01135, "median": 90292.40186, "upper": 276783.9402, "lower": 29516.30879, "gene": "old_pol"},
+			{"Date": "1987", "mean": 65016.08244, "median": 62787.53138, "upper": 199616.5999, "lower": 21622.98081, "gene": "old_pol"},
+			{"Date": "1986", "mean": 42805.82684, "median": 41324.26604, "upper": 112042.0615, "lower": 16984.26331, "gene": "old_pol"},
+			{"Date": "1985", "mean": 27259.10087, "median": 26130.66059, "upper": 66989.46654, "lower": 11034.89207, "gene": "old_pol"},
+			{"Date": "1984", "mean": 17590.27088, "median": 17290.69918, "upper": 41520.71417, "lower": 7202.196013, "gene": "old_pol"},
+			{"Date": "1983", "mean": 12704.43458, "median": 12467.39146, "upper": 28138.06002, "lower": 5778.063501, "gene": "old_pol"},
+			{"Date": "1982", "mean": 8523.396358, "median": 8172.889809, "upper": 18327.25156, "lower": 3987.173527, "gene": "old_pol"},
+			{"Date": "1981", "mean": 6223.024025, "median": 6029.589002, "upper": 13032.00845, "lower": 3280.938608, "gene": "old_pol"}
+		]
+            },
+            "encoding": {"x": {"field": "Date", "type": "temporal"}},
+            "layer": [
+            {"mark": {"type": "area","opacity": 0.15},
+            "encoding": {
+                    "y": {
+                    "field": "upper",
+                    "type": "quantitative",
+                    "axis": {
+                        "title":"Skygrid Plot Log Scale",
+                        "ticks":false},
+                        "scale": { "type": "log", "domain": [1, 10000000]}},
+                    "y2": {"field": "lower"},
+                    "x": {"field": "Date","type": "temporal"},
+                    "color": {"field":"gene","scale": {"type": "ordinal"}}
+                    }
+                },
+            {
+                "encoding": {
+                "color": {"field": "gene", "type": "nominal"},
+                    "y": {
+                    "field": "median", 
+                    "type": "quantitative",
+                    "axis": {
+                        "labels":false,
+                        "title":"",
+                        "ticks":false},
+                    "scale": { "type": "log", "domain": [1, 10000000]}}},
+                    "layer": [
+                    {"mark": "line"},
+                    {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
+                    ]
+                },
+                {
+                "transform": [{"pivot": "gene", "value": "median", "groupby": ["Date"]}],
+                "mark": "rule",
+                "encoding": {
+                "opacity": {
+                "condition": {"value": 0.3, "param": "hover", "empty": false},"value": 0},
+                "tooltip": [
+                {"field": "Pol", "type": "quantitative"},
+                {"field": "old_pol", "type": "quantitative"}
+                ]
+            },
+            "params": [{
+                "name": "hover",
+                "select": {
+                "type": "point",
+                "fields": ["Date"],
+                "nearest": true,
+                "on": "mouseover",
+                "clear": "mouseout"
+                }
+                }]
+            },
+            {
+  "data": {
+		"values": [
+			{"Date": "2006-03-06", "Sample": 1},
+			{"Date": "2006-08-24", "Sample": 1},
+			{"Date": "2006-08-10", "Sample": 1},
+			{"Date": "2006-03-28", "Sample": 1},
+			{"Date": "2006-11-28", "Sample": 1},
+			{"Date": "2006-06-28", "Sample": 1},
+			{"Date": "2007-09-20", "Sample": 1},
+			{"Date": "2006-11-20", "Sample": 1},
+			{"Date": "2006-11-21", "Sample": 1},
+			{"Date": "2006-12-08", "Sample": 1},
+			{"Date": "2006-06-14", "Sample": 1},
+			{"Date": "2004-12-13", "Sample": 1},
+			{"Date": "2007-06-11", "Sample": 1},
+			{"Date": "2007-08-28", "Sample": 1},
+			{"Date": "2007-08-27", "Sample": 1},
+			{"Date": "2008-01-16", "Sample": 1},
+			{"Date": "2008-03-27", "Sample": 1},
+			{"Date": "2007-10-24", "Sample": 1},
+			{"Date": "2007-08-16", "Sample": 1},
+			{"Date": "2007-06-04", "Sample": 1},
+			{"Date": "2008-03-11", "Sample": 1},
+			{"Date": "2007-06-28", "Sample": 1},
+			{"Date": "2008-03-31", "Sample": 1},
+			{"Date": "2007-11-06", "Sample": 1},
+			{"Date": "2007-12-20", "Sample": 1},
+			{"Date": "2008-02-12", "Sample": 1},
+			{"Date": "2007-05-07", "Sample": 1},
+			{"Date": "2007-07-19", "Sample": 1},
+			{"Date": "2007-02-08", "Sample": 1},
+			{"Date": "2007-08-02", "Sample": 1},
+			{"Date": "2007-12-14", "Sample": 1},
+			{"Date": "2007-08-22", "Sample": 1},
+			{"Date": "2007-12-11", "Sample": 1},
+			{"Date": "2006-06-21", "Sample": 1},
+			{"Date": "2008-02-13", "Sample": 1},
+			{"Date": "2007-06-26", "Sample": 1},
+			{"Date": "2008-03-18", "Sample": 1},
+			{"Date": "2007-11-05", "Sample": 1},
+			{"Date": "2007-08-08", "Sample": 1},
+			{"Date": "2009-01-20", "Sample": 1},
+			{"Date": "2007-06-01", "Sample": 1},
+			{"Date": "2007-12-04", "Sample": 1},
+			{"Date": "2007-02-21", "Sample": 1},
+			{"Date": "2006-04-25", "Sample": 1},
+			{"Date": "2006-10-05", "Sample": 1},
+			{"Date": "2007-01-24", "Sample": 1},
+			{"Date": "2007-08-21", "Sample": 1},
+			{"Date": "2006-05-24", "Sample": 1},
+			{"Date": "2006-11-30", "Sample": 1},
+			{"Date": "2007-01-12", "Sample": 1},
+			{"Date": "2007-05-15", "Sample": 1},
+			{"Date": "2007-03-14", "Sample": 1},
+			{"Date": "2007-01-20", "Sample": 1},
+			{"Date": "2007-09-26", "Sample": 1},
+			{"Date": "2007-04-10", "Sample": 1},
+			{"Date": "2008-02-08", "Sample": 1},
+			{"Date": "2008-06-13", "Sample": 1},
+			{"Date": "2008-08-12", "Sample": 1},
+			{"Date": "2006-12-22", "Sample": 1},
+			{"Date": "2006-07-10", "Sample": 1},
+			{"Date": "2006-11-22", "Sample": 1},
+			{"Date": "2006-08-23", "Sample": 1},
+			{"Date": "2006-09-29", "Sample": 1},
+			{"Date": "2006-09-04", "Sample": 1},
+			{"Date": "2006-08-30", "Sample": 1},
+			{"Date": "2007-09-11", "Sample": 1},
+			{"Date": "2005-11-14", "Sample": 1},
+			{"Date": "2006-09-13", "Sample": 1},
+			{"Date": "2006-09-18", "Sample": 1},
+			{"Date": "2006-06-02", "Sample": 1},
+			{"Date": "2006-04-03", "Sample": 1},
+			{"Date": "2008-01-30", "Sample": 1},
+			{"Date": "2008-03-13", "Sample": 1},
+			{"Date": "2006-05-19", "Sample": 1},
+			{"Date": "2007-02-16", "Sample": 1},
+			{"Date": "2008-06-30", "Sample": 1},
+			{"Date": "2008-04-08", "Sample": 1},
+			{"Date": "2008-08-21", "Sample": 1},
+			{"Date": "2008-08-25", "Sample": 1},
+			{"Date": "2008-10-28", "Sample": 1},
+			{"Date": "2008-11-21", "Sample": 1},
+			{"Date": "2005-09-22", "Sample": 1},
+			{"Date": "2005-12-15", "Sample": 1},
+			{"Date": "2006-01-05", "Sample": 1},
+			{"Date": "2006-02-13", "Sample": 1},
+			{"Date": "2006-02-14", "Sample": 1},
+			{"Date": "2006-10-04", "Sample": 1},
+			{"Date": "2006-12-06", "Sample": 1},
+			{"Date": "2006-04-20", "Sample": 1},
+			{"Date": "2006-04-19", "Sample": 1},
+			{"Date": "2006-09-19", "Sample": 1},
+			{"Date": "2006-10-06", "Sample": 1},
+			{"Date": "2006-10-12", "Sample": 1},
+			{"Date": "2006-10-18", "Sample": 1},
+			{"Date": "2006-10-24", "Sample": 1},
+			{"Date": "2006-12-13", "Sample": 1},
+			{"Date": "2006-02-22", "Sample": 1},
+			{"Date": "2007-04-26", "Sample": 1},
+			{"Date": "2005-10-25", "Sample": 1},
+			{"Date": "2006-05-16", "Sample": 1},
+			{"Date": "2007-09-22", "Sample": 1},
+			{"Date": "2007-03-29", "Sample": 1},
+			{"Date": "2007-05-21", "Sample": 1},
+			{"Date": "2006-11-02", "Sample": 1},
+			{"Date": "2007-12-06", "Sample": 1},
+			{"Date": "2006-05-22", "Sample": 1},
+			{"Date": "2007-12-03", "Sample": 1},
+			{"Date": "2005-12-08", "Sample": 1},
+			{"Date": "2006-11-10", "Sample": 1},
+			{"Date": "2007-06-29", "Sample": 1},
+			{"Date": "2007-05-22", "Sample": 1},
+			{"Date": "2007-11-15", "Sample": 1},
+			{"Date": "2007-11-03", "Sample": 1},
+			{"Date": "2007-05-04", "Sample": 1},
+			{"Date": "2007-08-15", "Sample": 1},
+			{"Date": "2006-02-06", "Sample": 1},
+			{"Date": "2007-03-26", "Sample": 1},
+			{"Date": "2007-04-13", "Sample": 1},
+			{"Date": "2008-01-11", "Sample": 1},
+			{"Date": "2007-05-12", "Sample": 1},
+			{"Date": "2005-08-25", "Sample": 1},
+			{"Date": "2005-11-07", "Sample": 1},
+			{"Date": "2006-07-18", "Sample": 1},
+			{"Date": "2006-04-04", "Sample": 1},
+			{"Date": "2007-02-20", "Sample": 1},
+			{"Date": "2007-02-23", "Sample": 1},
+			{"Date": "2006-12-09", "Sample": 1},
+			{"Date": "2007-01-19", "Sample": 1},
+			{"Date": "2007-02-19", "Sample": 1},
+			{"Date": "2006-12-20", "Sample": 1},
+			{"Date": "2007-12-01", "Sample": 1},
+			{"Date": "2007-02-28", "Sample": 1},
+			{"Date": "2008-05-05", "Sample": 1},
+			{"Date": "2005-07-03", "Sample": 1},
+			{"Date": "2005-09-20", "Sample": 1},
+			{"Date": "2005-09-27", "Sample": 1},
+			{"Date": "2005-07-19", "Sample": 1},
+			{"Date": "2005-10-08", "Sample": 1},
+			{"Date": "2005-12-19", "Sample": 1},
+			{"Date": "2006-01-19", "Sample": 1},
+			{"Date": "2007-10-31", "Sample": 1},
+			{"Date": "2006-01-17", "Sample": 1},
+			{"Date": "2006-10-08", "Sample": 1},
+			{"Date": "2006-03-18", "Sample": 1},
+			{"Date": "2007-03-12", "Sample": 1},
+			{"Date": "2007-07-06", "Sample": 1},
+			{"Date": "2006-09-21", "Sample": 1},
+			{"Date": "2006-09-20", "Sample": 1},
+			{"Date": "2006-09-10", "Sample": 1},
+			{"Date": "2007-03-09", "Sample": 1},
+			{"Date": "2007-10-29", "Sample": 1},
+			{"Date": "2007-12-13", "Sample": 1},
+			{"Date": "2007-07-12", "Sample": 1},
+			{"Date": "2007-08-18", "Sample": 1},
+			{"Date": "2007-08-03", "Sample": 1},
+			{"Date": "2007-10-30", "Sample": 1},
+			{"Date": "2008-08-05", "Sample": 1},
+			{"Date": "2008-05-20", "Sample": 1},
+			{"Date": "2009-02-19", "Sample": 1},
+			{"Date": "2009-03-04", "Sample": 1}
+		]
+  },
+      "mark": {"stroke": "#eba1b0d5", "type": "tick","opacity":0.3},
+      "encoding": {
+        "y": {
+          "field": "Sample",
+          "title": "Sampling Event",
+          "axis": {
+            "titleColor":"#c58595",
+            "ticks":false,
+            "labels":false,
+            "titleX": 25},
+          "scale": {"reverse":true, "domain":[1,2,3,4,5]}
+        },
+          "x": {
+          "field": "Date",
+	        "type": "temporal",
+          "axis": {"title": "Year"}
+        }
+      }
+    },
+  {
+  "data": {
+		"values": [
+			{"Date": "1990", "Incidence": 7.47},
+			{"Date": "1991", "Incidence": 6.92},
+			{"Date": "1992", "Incidence": 6.6},
+			{"Date": "1993", "Incidence": 6.32},
+			{"Date": "1994", "Incidence": 6.12},
+			{"Date": "1995", "Incidence": 5.88},
+			{"Date": "1996", "Incidence": 5.67},
+			{"Date": "1997", "Incidence": 5.44},
+			{"Date": "1998", "Incidence": 5.26},
+			{"Date": "1999", "Incidence": 5.09},
+			{"Date": "2000", "Incidence": 4.92},
+			{"Date": "2001", "Incidence": 4.78},
+			{"Date": "2002", "Incidence": 4.6},
+			{"Date": "2003", "Incidence": 4.46},
+			{"Date": "2004", "Incidence": 4.24},
+			{"Date": "2005", "Incidence": 4.12},
+			{"Date": "2006", "Incidence": 3.97},
+			{"Date": "2007", "Incidence": 3.87},
+			{"Date": "2008", "Incidence": 3.75},
+			{"Date": "2009", "Incidence": 3.58},
+			{"Date": "2010", "Incidence": 3.35},
+			{"Date": "2011", "Incidence": 3.07},
+			{"Date": "2012", "Incidence": 2.72},
+			{"Date": "2013", "Incidence": 2.51},
+			{"Date": "2014", "Incidence": 2.24},
+			{"Date": "2015", "Incidence": 1.99},
+			{"Date": "2016", "Incidence": 1.85},
+			{"Date": "2017", "Incidence": 1.64},
+			{"Date": "2018", "Incidence": 1.36},
+			{"Date": "2019", "Incidence": 1.24},
+			{"Date": "2020", "Incidence": 0.95}
+		]
+        },
+    "mark": "line",
+    "encoding": {
+        "x": {"field": "Date", "type": "temporal"},
+        "y": {
+        "field": "Incidence", 
+        "type": "quantitative",
+        "scale":{"domain":[0,15]},
+        "axis":{"titleX": 40,"titleColor":"purple"}
+        },
+        "color": {"value": "purple"}
+        
+    }
+    }]
+	};
+
+     // Embed the visualization in the container with id `vis`
+	vegaEmbed('#vis', vlSpec);
+
+    </script>
+  </body>
+</html>
