@@ -29,17 +29,17 @@
 
 #### Cohort Grouped with Import Intensity, Incidence Rate and Skygrid by Country 
 
-1. [Popart Zambia Import Intensity Skygrid](https://xiaoyu518.github.io/Popart_Import_Intensity.html)
-2. [Uganda Import Intensity Skygrid](https://xiaoyu518.github.io/Uganda_Import_Intensity.html)
+1. [Popart Zambia Import Intensity Skygrid](https://xiaoyu518.github.io/pol_Popart_Import_Intensity.html)
+2. [Uganda Import Intensity Skygrid](https://xiaoyu518.github.io/pol_Uganda_Import_Intensity.html)
 
 #### Source/Sink Ratio Estimations
 
-1. [Cohort Source/Sink Ratio from 1989](https://xiaoyu518.github.io/ssRatio_1989.html)
+1. [Cohort Source/Sink Ratio from 1989](https://xiaoyu518.github.io/pol_ssRatio_1989.html)
 
 #### Number of Import and Export Estimations
 
-1. [Number of Transition Events for Each Cohort from 1989](https://xiaoyu518.github.io/ssEvents_1989.html)
-3. [Number of Transition Events Between Outside and Within Uganda Cohorts](https://xiaoyu518.github.io/Uganda_Cohort_Transition.html)
+1. [Number of Transition Events for Each Cohort from 1989](https://xiaoyu518.github.io/pol_ssEvents_1989.html)
+3. [Number of Transition Events Between Outside and Within Uganda Cohorts](https://xiaoyu518.github.io/pol_Uganda_Cohort_Transition.html)
 
 #### Test Tree Skygrids
 
