@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Legend Interaction Test</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style media="screen">
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+	<div id="vis"></div>
+    <script>
+    	// Assign the specification to a local variable vlSpec.
+    	var vlSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": 750, "height": 450,
+            "title": "Uganda All Cohort Skygrid with Incidence Rate and Import Intensity",
+            "data": {
+                "values": [
+                    {"Date": "2014", "Mean": 25.061, "Upper": 114.645, "Lower": 5.1418, "Cohort": "PartnerUganda"},
+                    {"Date": "2013", "Mean": 64.1352, "Upper": 125.6769, "Lower": 31.7438, "Cohort": "PartnerUganda"},
+                    {"Date": "2012", "Mean": 543.5832, "Upper": 777.8037, "Lower": 382.7748, "Cohort": "PartnerUganda"},
+                    {"Date": "2011", "Mean": 2613.3681, "Upper": 3722.7107, "Lower": 1909.8193, "Cohort": "PartnerUganda"},
+                    {"Date": "2010", "Mean": 5223.7754, "Upper": 7611.0801, "Lower": 3445.5212, "Cohort": "PartnerUganda"},
+                    {"Date": "2009", "Mean": 4517.1221, "Upper": 6379.0695, "Lower": 3246.8568, "Cohort": "PartnerUganda"},
+                    {"Date": "2008", "Mean": 7912.8224, "Upper": 12649.0547, "Lower": 5398.6454, "Cohort": "PartnerUganda"},
+                    {"Date": "2007", "Mean": 7982.1399, "Upper": 12256.5457, "Lower": 5401.7829, "Cohort": "PartnerUganda"},
+                    {"Date": "2006", "Mean": 15245.2982, "Upper": 27245.7261, "Lower": 8257.4831, "Cohort": "PartnerUganda"},
+                    {"Date": "2005", "Mean": 26514.9905, "Upper": 57820.0795, "Lower": 11938.6191, "Cohort": "PartnerUganda"},
+                    {"Date": "2004", "Mean": 61761.8656, "Upper": 149914.7335, "Lower": 23669.0163, "Cohort": "PartnerUganda"},
+                    {"Date": "2003", "Mean": 73773.657, "Upper": 220861.0592, "Lower": 30183.6918, "Cohort": "PartnerUganda"},
+                    {"Date": "2002", "Mean": 100603.4005, "Upper": 355893.7155, "Lower": 34535.3299, "Cohort": "PartnerUganda"},
+                    {"Date": "2001", "Mean": 186909.2983, "Upper": 655279.0675, "Lower": 52334.7017, "Cohort": "PartnerUganda"},
+                    {"Date": "2000", "Mean": 232856.838, "Upper": 1025155.382, "Lower": 75941.4609, "Cohort": "PartnerUganda"},
+                    {"Date": "1999", "Mean": 227702.9171, "Upper": 896141.9062, "Lower": 67113.4952, "Cohort": "PartnerUganda"},
+                    {"Date": "1998", "Mean": 216598.6145, "Upper": 823874.9066, "Lower": 58819.2487, "Cohort": "PartnerUganda"},
+                    {"Date": "1997", "Mean": 206424.1318, "Upper": 783726.6957, "Lower": 59320.4511, "Cohort": "PartnerUganda"},
+                    {"Date": "1996", "Mean": 159277.9888, "Upper": 570393.9414, "Lower": 43354.0193, "Cohort": "PartnerUganda"},
+                    {"Date": "1995", "Mean": 88260.5946, "Upper": 294414.209, "Lower": 29633.1659, "Cohort": "PartnerUganda"},
+                    {"Date": "1994", "Mean": 38974.7643, "Upper": 113916.3143, "Lower": 14863.6767, "Cohort": "PartnerUganda"},
+                    {"Date": "1993", "Mean": 18510.533, "Upper": 46846.0248, "Lower": 8597.5296, "Cohort": "PartnerUganda"},
+                    {"Date": "1992", "Mean": 10656.8248, "Upper": 25405.3342, "Lower": 5166.1516, "Cohort": "PartnerUganda"},
+                    {"Date": "1991", "Mean": 7151.4856, "Upper": 15002.3948, "Lower": 3597.7938, "Cohort": "PartnerUganda"},
+                    {"Date": "1990", "Mean": 4155.8771, "Upper": 7722.8609, "Lower": 2163.0571, "Cohort": "PartnerUganda"},
+                    {"Date": "1989", "Mean": 2704.321, "Upper": 4697.838, "Lower": 1773.663, "Cohort": "PartnerUganda"},
+                    {"Date": "1988", "Mean": 2127.2274, "Upper": 3543.2809, "Lower": 1345.9275, "Cohort": "PartnerUganda"},
+                    {"Date": "1987", "Mean": 1217.5048, "Upper": 1871.847, "Lower": 800.0317, "Cohort": "PartnerUganda"},
+                    {"Date": "1986", "Mean": 687.0147, "Upper": 1039.5197, "Lower": 459.6188, "Cohort": "PartnerUganda"},
+                    {"Date": "1985", "Mean": 492.7438, "Upper": 742.8677, "Lower": 342.0253, "Cohort": "PartnerUganda"},
+                    {"Date": "1984", "Mean": 509.4334, "Upper": 904.3978, "Lower": 319.2706, "Cohort": "PartnerUganda"},
+                    {"Date": "1983", "Mean": 363.0433, "Upper": 606.4724, "Lower": 211.6866, "Cohort": "PartnerUganda"},
+                    {"Date": "1982", "Mean": 417.8962, "Upper": 890.0935, "Lower": 224.409, "Cohort": "PartnerUganda"},
+                    {"Date": "1981", "Mean": 284.0288, "Upper": 621.3546, "Lower": 155.7256, "Cohort": "PartnerUganda"},
+                    {"Date": "2017", "Mean": 9330.407, "Upper": 49121.3488, "Lower": 1526.5781, "Cohort": "MRCUganda"},
+                    {"Date": "2016", "Mean": 9062.8225, "Upper": 38822.6684, "Lower": 2366.602, "Cohort": "MRCUganda"},
+                    {"Date": "2015", "Mean": 10551.649, "Upper": 28606.7542, "Lower": 3766.1568, "Cohort": "MRCUganda"},
+                    {"Date": "2014", "Mean": 14590.8065, "Upper": 36707.9457, "Lower": 6697.2818, "Cohort": "MRCUganda"},
+                    {"Date": "2013", "Mean": 28996.6588, "Upper": 72438.6969, "Lower": 11191.4777, "Cohort": "MRCUganda"},
+                    {"Date": "2012", "Mean": 33040.242, "Upper": 73350.542, "Lower": 13519.5903, "Cohort": "MRCUganda"},
+                    {"Date": "2011", "Mean": 29975.1696, "Upper": 68534.0189, "Lower": 14591.5956, "Cohort": "MRCUganda"},
+                    {"Date": "2010", "Mean": 28056.4801, "Upper": 69126.4886, "Lower": 13425.3738, "Cohort": "MRCUganda"},
+                    {"Date": "2009", "Mean": 29605.9379, "Upper": 69745.6856, "Lower": 14370.7571, "Cohort": "MRCUganda"},
+                    {"Date": "2008", "Mean": 34097.016, "Upper": 73590.4902, "Lower": 15278.2954, "Cohort": "MRCUganda"},
+                    {"Date": "2007", "Mean": 42194.0384, "Upper": 108507.5578, "Lower": 18464.5221, "Cohort": "MRCUganda"},
+                    {"Date": "2006", "Mean": 64754.2642, "Upper": 171662.6275, "Lower": 24471.6239, "Cohort": "MRCUganda"},
+                    {"Date": "2005", "Mean": 88666.3301, "Upper": 272798.2197, "Lower": 32582.4893, "Cohort": "MRCUganda"},
+                    {"Date": "2004", "Mean": 93454.1699, "Upper": 246682.7254, "Lower": 33397.8579, "Cohort": "MRCUganda"},
+                    {"Date": "2003", "Mean": 80021.9036, "Upper": 231114.829, "Lower": 31828.3195, "Cohort": "MRCUganda"},
+                    {"Date": "2002", "Mean": 66784.4741, "Upper": 177213.6144, "Lower": 26991.7324, "Cohort": "MRCUganda"},
+                    {"Date": "2001", "Mean": 52060.867, "Upper": 138328.4405, "Lower": 21602.5972, "Cohort": "MRCUganda"},
+                    {"Date": "2000", "Mean": 41177.4514, "Upper": 102713.3095, "Lower": 17333.3579, "Cohort": "MRCUganda"},
+                    {"Date": "1999", "Mean": 36766.0244, "Upper": 93317.7317, "Lower": 16384.9227, "Cohort": "MRCUganda"},
+                    {"Date": "1998", "Mean": 40326.3873, "Upper": 103384.6567, "Lower": 15363.0988, "Cohort": "MRCUganda"},
+                    {"Date": "1997", "Mean": 46630.4331, "Upper": 135036.0957, "Lower": 20559.6078, "Cohort": "MRCUganda"},
+                    {"Date": "1996", "Mean": 49380.8115, "Upper": 122573.9112, "Lower": 18094.5181, "Cohort": "MRCUganda"},
+                    {"Date": "1995", "Mean": 47219.9153, "Upper": 130964.5339, "Lower": 16914.2723, "Cohort": "MRCUganda"},
+                    {"Date": "1994", "Mean": 41600.0725, "Upper": 123075.3981, "Lower": 17730.2627, "Cohort": "MRCUganda"},
+                    {"Date": "1993", "Mean": 33830.3826, "Upper": 82813.358, "Lower": 12629.0358, "Cohort": "MRCUganda"},
+                    {"Date": "1992", "Mean": 22481.0983, "Upper": 55464.2368, "Lower": 10604.8316, "Cohort": "MRCUganda"},
+                    {"Date": "1991", "Mean": 10694.4716, "Upper": 23963.874, "Lower": 4892.4544, "Cohort": "MRCUganda"},
+                    {"Date": "1990", "Mean": 4162.4902, "Upper": 8111.029, "Lower": 2111.4407, "Cohort": "MRCUganda"},
+                    {"Date": "1989", "Mean": 2843.8196, "Upper": 5667.1234, "Lower": 1670.2461, "Cohort": "MRCUganda"},
+                    {"Date": "1988", "Mean": 2923.9218, "Upper": 5852.6887, "Lower": 1733.0147, "Cohort": "MRCUganda"},
+                    {"Date": "1987", "Mean": 2195.8347, "Upper": 4133.7071, "Lower": 1284.2108, "Cohort": "MRCUganda"},
+                    {"Date": "1986", "Mean": 1376.987, "Upper": 2294.8335, "Lower": 805.4111, "Cohort": "MRCUganda"},
+                    {"Date": "1985", "Mean": 876.4612, "Upper": 1474.0415, "Lower": 524.852, "Cohort": "MRCUganda"},
+                    {"Date": "1984", "Mean": 570.6387, "Upper": 946.7995, "Lower": 364.9332, "Cohort": "MRCUganda"},
+                    {"Date": "1983", "Mean": 373.3702, "Upper": 606.3083, "Lower": 244.2665, "Cohort": "MRCUganda"},
+                    {"Date": "1982", "Mean": 370.6667, "Upper": 647.0173, "Lower": 226.7031, "Cohort": "MRCUganda"},
+                    {"Date": "1981", "Mean": 334.8021, "Upper": 661.018, "Lower": 187.0874, "Cohort": "MRCUganda"},
+                    {"Date": "2020", "Mean": 32365.4978, "Upper": 157300.3682, "Lower": 7957.3553, "Cohort": "UgandaRakai"},
+                    {"Date": "2019", "Mean": 31903.1277, "Upper": 93165.6204, "Lower": 9693.1267, "Cohort": "UgandaRakai"},
+                    {"Date": "2018", "Mean": 29227.3602, "Upper": 73247.9001, "Lower": 13112.4152, "Cohort": "UgandaRakai"},
+                    {"Date": "2017", "Mean": 19322.5037, "Upper": 35799.889, "Lower": 11242.881, "Cohort": "UgandaRakai"},
+                    {"Date": "2016", "Mean": 8743.532, "Upper": 11872.7041, "Lower": 6500.8012, "Cohort": "UgandaRakai"},
+                    {"Date": "2015", "Mean": 11322.0177, "Upper": 16003.5854, "Lower": 8373.4003, "Cohort": "UgandaRakai"},
+                    {"Date": "2014", "Mean": 21601.7681, "Upper": 32331.2048, "Lower": 14277.5132, "Cohort": "UgandaRakai"},
+                    {"Date": "2013", "Mean": 24642.4265, "Upper": 35156.0323, "Lower": 16939.3364, "Cohort": "UgandaRakai"},
+                    {"Date": "2012", "Mean": 28724.955, "Upper": 43804.1149, "Lower": 19848.2167, "Cohort": "UgandaRakai"},
+                    {"Date": "2011", "Mean": 31180.1386, "Upper": 45944.2167, "Lower": 21870.977, "Cohort": "UgandaRakai"},
+                    {"Date": "2010", "Mean": 35588.2959, "Upper": 54237.6938, "Lower": 22346.9075, "Cohort": "UgandaRakai"},
+                    {"Date": "2009", "Mean": 36743.5262, "Upper": 58263.0611, "Lower": 23966.2637, "Cohort": "UgandaRakai"},
+                    {"Date": "2008", "Mean": 39160.5528, "Upper": 62367.4759, "Lower": 23929.5603, "Cohort": "UgandaRakai"},
+                    {"Date": "2007", "Mean": 32784.2947, "Upper": 52255.56, "Lower": 21237.8182, "Cohort": "UgandaRakai"},
+                    {"Date": "2006", "Mean": 27977.4518, "Upper": 43372.0186, "Lower": 17785.8328, "Cohort": "UgandaRakai"},
+                    {"Date": "2005", "Mean": 28658.3143, "Upper": 44664.1549, "Lower": 18006.9676, "Cohort": "UgandaRakai"},
+                    {"Date": "2004", "Mean": 33144.6359, "Upper": 54680.9167, "Lower": 20922.2871, "Cohort": "UgandaRakai"},
+                    {"Date": "2003", "Mean": 36326.062, "Upper": 58493.7269, "Lower": 22632.1604, "Cohort": "UgandaRakai"},
+                    {"Date": "2002", "Mean": 38203.7598, "Upper": 63863.7776, "Lower": 21866.2296, "Cohort": "UgandaRakai"},
+                    {"Date": "2001", "Mean": 35667.0314, "Upper": 62153.679, "Lower": 22817.6252, "Cohort": "UgandaRakai"},
+                    {"Date": "2000", "Mean": 35701.0631, "Upper": 58162.9353, "Lower": 21703.8153, "Cohort": "UgandaRakai"},
+                    {"Date": "1999", "Mean": 40519.0585, "Upper": 68295.7739, "Lower": 24804.7591, "Cohort": "UgandaRakai"},
+                    {"Date": "1998", "Mean": 45589.7853, "Upper": 77502.6104, "Lower": 26736.797, "Cohort": "UgandaRakai"},
+                    {"Date": "1997", "Mean": 49112.3992, "Upper": 88001.0164, "Lower": 27670.7215, "Cohort": "UgandaRakai"},
+                    {"Date": "1996", "Mean": 50212.6724, "Upper": 92800.5554, "Lower": 29961.7997, "Cohort": "UgandaRakai"},
+                    {"Date": "1995", "Mean": 43997.1631, "Upper": 78888.2649, "Lower": 24144.7501, "Cohort": "UgandaRakai"},
+                    {"Date": "1994", "Mean": 34249.8921, "Upper": 64172.5064, "Lower": 21276.4889, "Cohort": "UgandaRakai"},
+                    {"Date": "1993", "Mean": 23422.8563, "Upper": 37990.1072, "Lower": 13454.7281, "Cohort": "UgandaRakai"},
+                    {"Date": "1992", "Mean": 14750.8765, "Upper": 23228.9845, "Lower": 8930.9559, "Cohort": "UgandaRakai"},
+                    {"Date": "1991", "Mean": 8721.8315, "Upper": 13855.8578, "Lower": 5803.9129, "Cohort": "UgandaRakai"},
+                    {"Date": "1990", "Mean": 5590.3688, "Upper": 8468.7436, "Lower": 3823.0797, "Cohort": "UgandaRakai"},
+                    {"Date": "1989", "Mean": 3797.9527, "Upper": 5296.2013, "Lower": 2588.9133, "Cohort": "UgandaRakai"},
+                    {"Date": "1988", "Mean": 3052.1513, "Upper": 4275.6199, "Lower": 2256.2104, "Cohort": "UgandaRakai"},
+                    {"Date": "1987", "Mean": 2133.1119, "Upper": 2922.571, "Lower": 1549.6651, "Cohort": "UgandaRakai"},
+                    {"Date": "1986", "Mean": 1287.213, "Upper": 1727.6027, "Lower": 968.6958, "Cohort": "UgandaRakai"},
+                    {"Date": "1985", "Mean": 787.6798, "Upper": 1066.7325, "Lower": 602.3676, "Cohort": "UgandaRakai"},
+                    {"Date": "1984", "Mean": 675.8434, "Upper": 958.3152, "Lower": 487.0578, "Cohort": "UgandaRakai"},
+                    {"Date": "1983", "Mean": 581.028, "Upper": 888.7215, "Lower": 398.4966, "Cohort": "UgandaRakai"},
+                    {"Date": "1982", "Mean": 312.0497, "Upper": 465.7848, "Lower": 210.7456, "Cohort": "UgandaRakai"},
+                    {"Date": "1981", "Mean": 213.9138, "Upper": 304.7559, "Lower": 145.0799, "Cohort": "UgandaRakai"}
+                    ]
+                },
+                "encoding": {"x": {"field": "Date", "type": "temporal"}},
+                "layer": [
+                    {"mark": {"type": "area","opacity": 0.15},
+                    "encoding": {
+                        "y": {
+                            "field": "Upper",
+                            "type": "quantitative",
+                            "axis": {
+                                "title":"Skygrid Plot Log Scale",
+                                "ticks":false},
+                                "scale": { "type": "log", "domain": [1, 1000000]}},
+                            "y2": {"field": "Lower"},
+                            "x": {"field": "Date","type": "temporal"},
+                            "color": {
+                                "field":"Cohort"}
+                            }
+                    },
+                    {
+                    "encoding": {
+                        "color": {"field": "Cohort", "type": "nominal"},
+                            "y": {
+                            "field": "Mean", 
+                            "type": "quantitative",
+                            "axis": {
+                                "labels":false,
+                                "title":"",
+                                "ticks":false},
+                            "scale": { "type": "log", "domain": [1, 1000000]}}},
+                            "layer": [
+                            {"mark": "line"},
+                            {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
+                                ]
+                    },
+                    {
+                    "transform": [{"pivot": "Cohort", "value": "Mean", "groupby": ["Date"]}],
+                        "mark": "rule",
+                        "encoding": {
+                        "opacity": {
+                        "condition": {"value": 0.3, "param": "hover", "empty": false},"value": 0},
+                    "tooltip": [
+                        {"field": "PartnerUganda", "type": "quantitative"},
+                        {"field": "MRCUganda", "type": "quantitative"},
+                        {"field": "UgandaRakai", "type": "quantitative"}
+                        ]
+                    },
+                    "params": [{
+                        "name": "hover",
+                        "select": {
+                        "type": "point",
+                        "fields": ["Date"],
+                        "nearest": true,
+                        "on": "mouseover",
+                        "clear": "mouseout"
+                        }
+                    }]
+                },
+                {
+                "data": {
+                "values": [
+                        {"Date": "2006-06-28", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2010-10-05", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2006-11-03", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2006-12-02", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2011-01-22", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2015-01-30", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2014-04-02", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2005-10-05", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2000-05-22", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2005-09-06", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2007-05-12", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2006-06-06", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2005-07-28", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2000-07-09", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2014-02-13", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2014-05-27", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2007-05-12", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2005-08-18", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2013-08-04", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2011-12-13", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2006-04-20", "Transition_Event": 3, "Import_Direction": "PartnerUganda-MRCUganda"},
+                        {"Date": "2003-06-14", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2004-09-13", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2005-05-05", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2004-04-05", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2005-02-17", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2004-01-30", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2005-07-28", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2003-11-25", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2005-10-30", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2003-04-13", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2006-04-16", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2006-09-13", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2004-05-04", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2003-04-13", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2012-03-06", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2009-03-11", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2007-07-09", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2002-12-02", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2006-01-11", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2002-07-24", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2004-09-16", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2004-09-16", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2004-12-06", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2003-10-09", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2004-12-06", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2004-10-27", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2004-10-27", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2005-02-02", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2004-02-13", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2006-05-27", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2008-07-05", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2006-12-28", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2005-01-22", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2006-05-23", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2004-12-17", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2001-03-22", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2004-04-19", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2002-12-21", "Transition_Event": 1, "Import_Direction": "PartnerUganda-UgandaRakai"},
+                        {"Date": "2010-01-19", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2010-10-12", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2012-03-21", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"},
+                        {"Date": "2010-10-16", "Transition_Event": 2, "Import_Direction": "MRCUganda-UgandaRakai"}
+                    ]
+                },
+                "mark": "point",
+                "encoding": {
+                    "y": {
+                    "field": "Transition_Event",
+                    "title": "Transition Event",
+                    "type": "nominal",
+                    "scale": {
+                        "reverse":true,
+                        "domain":[1,2,3,4,5,6,7,8]},
+                    "axis":{
+                        "grid":false,
+                        "ticks":false,
+                        "labels":false,
+                        "titleX":25}
+                    },
+                    "x": {
+                        "field": "Date",
+                        "type": "temporal"
+                        },
+                    "stroke": {
+                        "field": "Import_Direction", 
+                        "type": "nominal",
+                        "title": "Import Direction"
+                        },
+                    "shape":{"value":"triangle-right"}
+                    }
+                },
+            {
+            "data": {
+                    "values": [
+                        {"Date": "2000", "Incidence": 1.01, "Prevalence": 12.2, "Community": "Agrarian"},
+                        {"Date": "2001", "Incidence": 1.27, "Prevalence": 12.1, "Community": "Agrarian"},
+                        {"Date": "2003", "Incidence": 1.18, "Prevalence": 11.4, "Community": "Agrarian"},
+                        {"Date": "2004", "Incidence": 1.19, "Prevalence": 11.6, "Community": "Agrarian"},
+                        {"Date": "2005", "Incidence": 1.11, "Prevalence": 11.5, "Community": "Agrarian"},
+                        {"Date": "2007", "Incidence": 1.2, "Prevalence": 11.4, "Community": "Agrarian"},
+                        {"Date": "2009", "Incidence": 1.23, "Prevalence": 12.1, "Community": "Agrarian"},
+                        {"Date": "2010", "Incidence": 1.07, "Prevalence": 12.5, "Community": "Agrarian"},
+                        {"Date": "2012", "Incidence": 0.84, "Prevalence": 13.1, "Community": "Agrarian"},
+                        {"Date": "2014", "Incidence": 0.67, "Prevalence": 12.7, "Community": "Agrarian"},
+                        {"Date": "2015", "Incidence": 0.65, "Prevalence": 12.6, "Community": "Agrarian"},
+                        {"Date": "2012", "Incidence": 3.43, "Prevalence": 41.3, "Community": "Fishing"},
+                        {"Date": "2014", "Incidence": 3.02, "Prevalence": 38.7, "Community": "Fishing"},
+                        {"Date": "2015", "Incidence": 2.6, "Prevalence": 37.7, "Community": "Fishing"},
+                        {"Date": "2000", "Incidence": 0.64, "Prevalence": 15.9, "Community": "Trading"},
+                        {"Date": "2001", "Incidence": 1.6, "Prevalence": 16.4, "Community": "Trading"},
+                        {"Date": "2003", "Incidence": 1.32, "Prevalence": 14.9, "Community": "Trading"},
+                        {"Date": "2004", "Incidence": 1.57, "Prevalence": 17.4, "Community": "Trading"},
+                        {"Date": "2005", "Incidence": 1.27, "Prevalence": 16.3, "Community": "Trading"},
+                        {"Date": "2007", "Incidence": 0.81, "Prevalence": 19.0, "Community": "Trading"},
+                        {"Date": "2009", "Incidence": 1.96, "Prevalence": 19.4, "Community": "Trading"},
+                        {"Date": "2010", "Incidence": 1.65, "Prevalence": 18.9, "Community": "Trading"},
+                        {"Date": "2012", "Incidence": 1.05, "Prevalence": 16.7, "Community": "Trading"},
+                        {"Date": "2014", "Incidence": 0.88, "Prevalence": 15.2, "Community": "Trading"},
+                        {"Date": "2015", "Incidence": 0.6, "Prevalence": 15.0, "Community": "Trading"},
+                        {"Date": "2000", "Incidence": 4.92, "Prevalence": 8.1, "Community": "UNAIDS"},
+                        {"Date": "2001", "Incidence": 4.78, "Prevalence": 7.9, "Community": "UNAIDS"},
+                        {"Date": "2002", "Incidence": 4.6, "Prevalence": 7.6, "Community": "UNAIDS"},
+                        {"Date": "2003", "Incidence": 4.46, "Prevalence": 7.4, "Community": "UNAIDS"},
+                        {"Date": "2004", "Incidence": 4.24, "Prevalence": 7.2, "Community": "UNAIDS"},
+                        {"Date": "2005", "Incidence": 4.12, "Prevalence": 7.1, "Community": "UNAIDS"},
+                        {"Date": "2006", "Incidence": 3.97, "Prevalence": 7.0, "Community": "UNAIDS"},
+                        {"Date": "2007", "Incidence": 3.87, "Prevalence": 7.0, "Community": "UNAIDS"},
+                        {"Date": "2008", "Incidence": 3.75, "Prevalence": 6.9, "Community": "UNAIDS"},
+                        {"Date": "2009", "Incidence": 3.58, "Prevalence": 6.9, "Community": "UNAIDS"},
+                        {"Date": "2010", "Incidence": 3.35, "Prevalence": 6.8, "Community": "UNAIDS"},
+                        {"Date": "2011", "Incidence": 3.07, "Prevalence": 6.8, "Community": "UNAIDS"},
+                        {"Date": "2012", "Incidence": 2.72, "Prevalence": 6.7, "Community": "UNAIDS"},
+                        {"Date": "2013", "Incidence": 2.51, "Prevalence": 6.6, "Community": "UNAIDS"},
+                        {"Date": "2014", "Incidence": 2.24, "Prevalence": 6.5, "Community": "UNAIDS"},
+                        {"Date": "2015", "Incidence": 1.99, "Prevalence": 6.3, "Community": "UNAIDS"}
+                    ]
+                },
+            "mark": "line",
+            "encoding": {
+                "x": {"field": "Date", "type": "temporal"},
+                "y": {
+                "field": "Incidence", 
+                "type": "quantitative",
+                "scale":{"domain":[0,8]},
+                "axis":{"titleX": 40,"titleColor":"purple"}
+                },
+                "strokeDash": {"field":"Community"},
+                "color":{"value":"purple"} 
+            }
+            }]
+        }
+     // Embed the visualization in the container with id `vis`
+	vegaEmbed('#vis', vlSpec);
+
+    </script>
+  </body>
+</html>

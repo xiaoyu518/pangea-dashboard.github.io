@@ -21,25 +21,24 @@
     	var vlSpec = {
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
             "title": {
-                "text": "Source Sink Ratios for Individual Cohorts (gag)",
+                "text": "Source Sink Ratios for Individual Cohorts (env)",
                 "fontSize":16,
                 "offset":20
             },
             "width": 600, "height": 400,
             "data": {
-                    "values": [
-                        {"cohort": "UgandaRakai", "ss_ratio": 1.0},
-                        {"cohort": "PartnerUganda", "ss_ratio": -0.937},
-                        {"cohort": "MRCUganda", "ss_ratio": 0.517},
-                        {"cohort": "PartnerTanzania", "ss_ratio": -0.455},
-                        {"cohort": "PartnerKenya", "ss_ratio": 0.518},
-                        {"cohort": "PopartCentral", "ss_ratio": -0.429},
-                        {"cohort": "PopartCopperbelt", "ss_ratio": 0.2},
-                        {"cohort": "PopartSouthern", "ss_ratio": -0.75},
-                        {"cohort": "AHRISouthAfrica", "ss_ratio": -1.0},
-                        {"cohort": "PopartHCF", "ss_ratio": 1.0},
-                        {"cohort": "PopartPC", "ss_ratio": 0.636}
-                    ]
+				"values": [
+					{"cohort": "UgandaRakai", "ss_ratio": 1.0},
+					{"cohort": "PartnerUganda", "ss_ratio": -1.0},
+					{"cohort": "MRCUganda", "ss_ratio": -0.959},
+					{"cohort": "PopartCentral", "ss_ratio": -1.0},
+					{"cohort": "PopartCopperbelt", "ss_ratio": -0.6},
+					{"cohort": "PartnerSouthAfrica", "ss_ratio": -1.0},
+					{"cohort": "PopartSouthern", "ss_ratio": -1.0},
+					{"cohort": "AHRISouthAfrica", "ss_ratio": 1.0},
+					{"cohort": "PopartHCF", "ss_ratio": 1.0},
+					{"cohort": "PopartPC", "ss_ratio": 1.0}
+				]
             },
             "encoding": {
                 "y": {
@@ -70,7 +69,7 @@
                 "mark": {
                 "type": "text",
                 "align": "right",
-                "xOffset": -1,
+                "xOffset": 14,
                 "aria": false,
                 "fontSize": 12
                 },
